@@ -1,0 +1,21 @@
+name: build
+on:
+  push:
+jobs:
+  build:
+    name: my job 
+    runs-on: ${{ matrix.os }} 
+    strategy: 
+      matrix:
+        os: [ubuntu-latest]
+        node: [12,14]
+    steps:
+      - name: my first step 
+        env:
+          MY_VAR:  Hi there! My name is
+          FIRST_NAME: SULEYMAN
+          MIDDLE_NAME: FERIT 
+          LAST_NAME: BAT 
+        run: echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME 
+
+        

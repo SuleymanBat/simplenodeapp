@@ -17,5 +17,8 @@ jobs:
           MIDDLE_NAME: FERIT 
           LAST_NAME: BAT 
         run: echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME 
+      - name: my second step 
+        if: success()
+        run: echo "The previous step has finished successfully"
 
         
